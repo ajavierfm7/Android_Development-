@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TareaUno</string>
+    <string name="name">Nombre!</string>
+    <string name="txtName">Ingresa tu Nombre</string>
+</resources>
