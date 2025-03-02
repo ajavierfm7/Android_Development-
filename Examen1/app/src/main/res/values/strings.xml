@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Examen1</string>
+    <string name="salario_bruto">Salario Bruto: C$ %.2f</string>
+    <string name="deduccion_inss">Deducción INSS (7%%): C$ %.2f</string> <!-- Aquí está el cambio -->
+    <string name="salario_neto">Salario Neto: C$ %.2f</string>
+    <string name="error_datos">Error: Ingresa todos los valores</string>
+    <string name="error_numeros">Error: Ingresa números válidos</string>
 </resources>
+
+

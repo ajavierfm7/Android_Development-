@@ -18,15 +18,42 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calcularSalario() {
-        val horasTrabajadas = binding.etHorasTrabajadas.text.toString().toDoubleOrNull() ?: 0.0
-        val tarifaHora = binding.etTarifaHora.text.toString().toDoubleOrNull() ?: 0.0
+        println("Función calcularSalario() ejecutada") // Depuración
+
+        val horasText = binding.etHorasTrabajadas.text.toString().trim()
+        val tarifaText = binding.etTarifaHora.text.toString().trim()
+
+        // Validar si los campos están vacíos
+        if (horasText.isEmpty() || tarifaText.isEmpty()) {
+            println("Error: Uno o más campos vacíos") // Depuración
+            binding.tvSalarioBruto.text = getString(R.string.error_datos)
+            binding.tvDeduccionINSS.text = ""
+            binding.tvSalarioNeto.text = ""
+            return
+        }
+
+        val horasTrabajadas = horasText.toDoubleOrNull()
+        val tarifaHora = tarifaText.toDoubleOrNull()
+
+        // Validar si los valores son números válidos
+        if (horasTrabajadas == null || tarifaHora == null) {
+            println("Error: Valores inválidos") // Depuración
+            binding.tvSalarioBruto.text = getString(R.string.error_numeros)
+            binding.tvDeduccionINSS.text = ""
+            binding.tvSalarioNeto.text = ""
+            return
+        }
 
         val salarioBruto = horasTrabajadas * tarifaHora
         val deduccionINSS = salarioBruto * 0.07
         val salarioNeto = salarioBruto - deduccionINSS
 
-        binding.tvSalarioBruto.text = "Salario Bruto: C$ %.2f".format(salarioBruto)
-        binding.tvDeduccionINSS.text = "Deducción INSS (7%): C$ %.2f".format(deduccionINSS)
-        binding.tvSalarioNeto.text = "Salario Neto: C$ %.2f".format(salarioNeto)
+        println("Salario calculado: Bruto=$salarioBruto, INSS=$deduccionINSS, Neto=$salarioNeto") // Depuración
+
+        // Corregir el uso de `String.format()` para evitar `UnknownFormatConversionException`
+        binding.tvSalarioBruto.text = String.format(getString(R.string.salario_bruto), salarioBruto)
+        binding.tvDeduccionINSS.text = String.format(getString(R.string.deduccion_inss), deduccionINSS)
+        binding.tvSalarioNeto.text = String.format(getString(R.string.salario_neto), salarioNeto)
     }
 }
+
