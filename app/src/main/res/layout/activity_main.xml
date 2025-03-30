@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/mainLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modo Oscuro automático activado"
+        android:textColor="@color/textColor" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:background="#CCCCCC"/>
+
+    <EditText
+        android:id="@+id/editDescription"
+        android:hint="@string/descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnTomarFoto"
+        android:text="@string/tomar_foto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:text="@string/guardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnModoClaro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/modo_claro"/>
+
+    <Button
+        android:id="@+id/btnModoOscuro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/modo_oscuro"/>
+
+    <Button
+        android:id="@+id/btnEsp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/idioma_esp"/>
+
+    <Button
+        android:id="@+id/btnEng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/idioma_ing"/>
+
+</LinearLayout>

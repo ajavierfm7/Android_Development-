@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Camera</string>
+    <string name="tomar_foto">Take Photo</string>
+    <string name="guardar">Save</string>
+    <string name="modo_claro">Light Mode</string>
+    <string name="modo_oscuro">Dark Mode</string>
+    <string name="descripcion">Description</string>
+    <string name="modo_activado">Dark Mode automatically activated</string>
+    <string name="idioma_esp">Spanish</string>
+    <string name="idioma_ing">English</string>
+</resources>
