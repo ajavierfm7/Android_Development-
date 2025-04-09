@@ -24,11 +24,17 @@
         android:id="@+id/btnCarrito"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="🛒 Ver carrito"
-        android:layout_margin="16dp"
+        android:text="Ver carrito"
+        android:drawableStart="@drawable/ic_cart"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:backgroundTint="@color/chocolate_dark"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

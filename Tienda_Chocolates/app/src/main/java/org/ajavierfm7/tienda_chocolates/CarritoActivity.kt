@@ -23,6 +23,8 @@ class CarritoActivity : AppCompatActivity() {
         CarritoManager.cargar(this)
 
         val productosCarrito = CarritoManager.obtenerCarrito()
+        binding.txtTotal.text = "Total: C$${CarritoManager.total()}"
+
 
         if (productosCarrito.isEmpty()) {
             Toast.makeText(this, "El carrito está vacío", Toast.LENGTH_SHORT).show()
@@ -38,6 +40,11 @@ class CarritoActivity : AppCompatActivity() {
             CarritoManager.limpiar(this)
             Toast.makeText(this, "Carrito vaciado", Toast.LENGTH_SHORT).show()
             recreate() // recargar la actividad para actualizar la vista
+        }
+
+
+        binding.btnVolver.setOnClickListener {
+            finish() // Cierra la Activity actual y vuelve a la anterior
         }
 
 

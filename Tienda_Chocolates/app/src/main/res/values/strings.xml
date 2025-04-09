@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Tienda_Chocolates</string>
+    <string name="bienvenida">Bienvenido a Chocolates Nicarao</string>
+    <string name="entrar_tienda">Entrar a la tienda</string>
+    <string name="logo_desc">Logo de Chocolates Nicarao</string>
+
 </resources>

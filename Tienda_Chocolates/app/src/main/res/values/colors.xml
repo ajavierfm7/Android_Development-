@@ -2,4 +2,16 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="chocolate_primary">#6D4C41</color>
+    <color name="chocolate_light">#BCAAA4</color>
+    <color name="text_light">#FFFFFF</color>
+    <color name="background_light">#FFF8F1</color>
+    <color name="fondo_crema">#FFF8F0</color>
+    <color name="chocolate_dark">#5D4037</color>
+    <color name="chocolate_purple">#7B4B94</color>
+    <color name="fondo_cacao_claro">#FBEFE2</color>
+    <color name="chocolate_gold">#A97432</color>
+
+
+
 </resources>
