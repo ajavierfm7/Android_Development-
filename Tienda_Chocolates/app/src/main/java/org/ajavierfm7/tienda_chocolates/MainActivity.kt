@@ -1,6 +1,9 @@
 package org.ajavierfm7.tienda_chocolates
 
 import android.os.Bundle
+import android.content.Intent
+import android.widget.Toast
+import org.ajavierfm7.tienda_chocolates.model.CarritoManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import org.ajavierfm7.tienda_chocolates.adapter.ProductoAdapter
@@ -16,7 +19,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Lista de productos 🍫
+        CarritoManager.cargar(this)
+
         val productos = listOf(
             Producto("Bombones", "Dulces rellenos de chocolate con licor", 2.50, R.drawable.bombones),
             Producto("Paletas", "Paletas de chocolate con forma divertida", 1.75, R.drawable.paletas),
@@ -24,8 +28,17 @@ class MainActivity : AppCompatActivity() {
             Producto("Barra", "Barra clásica de chocolate con leche", 3.00, R.drawable.barra)
         )
 
-        // Configuración del RecyclerView
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
-        binding.recyclerView.adapter = ProductoAdapter(productos)
+        binding.recyclerView.adapter = ProductoAdapter(productos) { productoSeleccionado ->
+            CarritoManager.agregar(this, productoSeleccionado)
+            Toast.makeText(this, "Producto agregado al carrito", Toast.LENGTH_SHORT).show()
+        }
+
+        // Evento para abrir el carrito
+        binding.btnCarrito.setOnClickListener {
+            val intent = Intent(this, CarritoActivity::class.java)
+            startActivity(intent)
+        }
     }
+
 }
