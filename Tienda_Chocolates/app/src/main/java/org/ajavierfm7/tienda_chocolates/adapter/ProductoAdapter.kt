@@ -16,8 +16,8 @@ class ProductoAdapter(
         fun bind(producto: Producto) {
             binding.txtNombre.text = producto.nombre
             binding.txtDescripcion.text = producto.descripcion
-            binding.txtPrecio.text = "C$${producto.precio}"
-            binding.imgProducto.setImageResource(producto.imagenResId)
+            binding.txtPrecio.text = "$${producto.precio}"
+            binding.imgProducto.setImageResource(producto.imagen)
 
             binding.root.setOnClickListener {
                 onClick(producto) // <- Ejecuta el clic personalizado

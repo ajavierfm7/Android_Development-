@@ -12,7 +12,12 @@ object CarritoManager {
     private val carrito = mutableListOf<Producto>()
 
     fun agregar(context: Context, producto: Producto) {
-        carrito.add(producto)
+        val existente = carrito.find { it.nombre == producto.nombre }
+        if (existente != null) {
+            existente.cantidad += 1
+        } else {
+            carrito.add(producto.copy())
+        }
         guardar(context)
     }
 
@@ -46,8 +51,13 @@ object CarritoManager {
             val listaGuardada: MutableList<Producto> = Gson().fromJson(json, type)
             carrito.clear()
             carrito.addAll(listaGuardada)
+
+
         }
     }
+
+    fun totalCantidad(): Int = carrito.sumOf { it.cantidad }
+
 }
 
 
