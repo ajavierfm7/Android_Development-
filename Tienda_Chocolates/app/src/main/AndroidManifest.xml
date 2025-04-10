@@ -31,6 +31,9 @@
             android:name=".CarritoActivity"
             android:exported="false" />
 
+        <activity android:name=".PedidoActivity" />
+
+
     </application>
 
 </manifest>

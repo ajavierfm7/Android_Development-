@@ -1,5 +1,6 @@
 package org.ajavierfm7.tienda_chocolates
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -42,6 +43,13 @@ class CarritoActivity : AppCompatActivity() {
             Toast.makeText(this, "Carrito vaciado", Toast.LENGTH_SHORT).show()
             recreate()
         }
+
+        // Pasar a realizar pedido
+        binding.btnContinuar.setOnClickListener {
+            val intent = Intent(this, PedidoActivity::class.java)
+            startActivity(intent)
+        }
+
 
         // Volver
         binding.btnVolver.setOnClickListener {

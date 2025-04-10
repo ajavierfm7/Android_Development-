@@ -1,0 +1,21 @@
+Muchas gracias Jose Duran por sus enseñanzas.
+
+Los datos del proyecto para el examen final son:
+
+Nombre de la Aplicación: Tienda de Chocolates
+Empresa: Chocolates Nicarao
+Integrantes del grupo: 
+
+-Danipza Calderón (la nota va por 55 segun lo conversado)
+-Orlany Pérez (la nota va por 55 segun lo conversado)
+-Álvaro Fornos 
+
+Link del repositorio GitHub donde la carpeta es "Tienda_Chocolates":
+
+https://github.com/ajavierfm7/Android_Development-.git
+
+
+Link del video que explica el desarrollo de la APP:
+
+https://drive.google.com/file/d/1bgYV6hgdJrZvjSRwqcC7QOx26kniigcW/view?usp=sharing
+
